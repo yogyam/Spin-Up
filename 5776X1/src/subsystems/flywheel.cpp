@@ -1,20 +1,19 @@
 #include "main.h"
 
-Motor flywheel1 (14, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);
-Motor flywheel2 (15, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);
+
+Motor catapault (14, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);
 
 
-void updateFlywheel() {
+
+void updateCata() {
   if (controller.getDigital(ControllerDigital::L1) == 1){
-    flywheel1.moveVelocity(-565);
-    flywheel2.moveVelocity(565);
+    catapault.moveVelocity(-600);
+    //600 is max, -600 is min, - is reverse
   }
   else if (controller.getDigital(ControllerDigital::L2) == 1) {
-    flywheel1.moveVelocity(-500);
-    flywheel2.moveVelocity(500);
+    catapault.moveVelocity(200);
   }
   else{
-    flywheel1.moveVelocity(0);
-    flywheel2.moveVelocity(0);
+    catapault.moveVelocity(0);
   }
 }

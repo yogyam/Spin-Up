@@ -1,6 +1,5 @@
 #include "main.h"
 
-extern Motor flywheel1;
-extern Motor flywheel2;
+extern Motor catapualt;
 
-void updateFlywheel();
+void updateCata();

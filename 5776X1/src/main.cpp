@@ -90,7 +90,7 @@ void opcontrol() {
 		updateIntake();
 		updateDrive();
 		updateIndexer();
-		updateFlywheel();
+		updateCata();
 		rate.delay(10_Hz);
 	}
 }

@@ -1,4 +1,4 @@
 #include "main.h"
 
-void startPosRoller();
-void autoAim();
+void startAtRedTwo();
+//void autoAim();
